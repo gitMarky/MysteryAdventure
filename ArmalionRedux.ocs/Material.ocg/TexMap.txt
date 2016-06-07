@@ -6,7 +6,7 @@ OverloadMaterials
 OverloadTextures
 
 1=Tunnel-SmallRock
-2=Tunnel-Smooth
+2=Tunnel-tunnel
 3=Wall-Flat
 4=Wall-RoughDark
 5=Wall-Structure3
@@ -29,13 +29,13 @@ OverloadTextures
 22=Sulphur-Snow2
 23=Acid-Liquid
 24=Ashes-Spots
-25=Crystal-Structure
+25=Crystal-Amethyst
 26=Water-Fleckig
-27=Oil-Smooth
-28=Acid-Smooth
-29=Lava-Smooth
-30=DuroLava-LIQUID
-31=DuroLava-Smooth
+27=Oil-oil
+28=Acid-acid
+29=Lava-lava
+30=DuroLava-lava
+31=DuroLava-lava_red
 32=Vehicle-Rough
 33=Swamp-Swamp
 34=Swamp-Fleckig
@@ -51,9 +51,9 @@ OverloadTextures
 44=Earth2-Swirl
 45=Earth2-Flare2
 46=Earth2-Grass1
-47=Earth-Smooth
-48=Earth-Smooth2
-49=Earth-Rough
+47=Earth-earth
+48=Earth-earth_spongy
+49=Earth-earth_root
 50=Earth-Flare
 51=Earth-Bewuchs2
 52=Earth-Dirt2
@@ -67,7 +67,7 @@ OverloadTextures
 60=Ashes-RoughDark
 61=Ashes-Rough
 62=Ashes-Bewuchs2
-63=Sand-Smooth
+63=Sand-earth
 64=Sand-Sand
 65=Sand-Sand2
 66=Gold-Rough
@@ -78,7 +78,7 @@ OverloadTextures
 71=Crystal-Flare
 72=FlyAshes-Rough
 73=FlyAshes-RoughDark
-74=FlySand-Smooth
+74=FlySand-sand
 75=Ice-SmallRock
 76=Ice-Flare3
 77=Ice-Snow3
