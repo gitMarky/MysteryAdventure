@@ -1,6 +1,6 @@
 [Material]
 Name=Earth2
-Shape=2
+Shape=Rough
 Density=50
 Friction=80
 DigFree=1

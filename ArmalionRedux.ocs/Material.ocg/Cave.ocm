@@ -1,6 +1,6 @@
 [Material]
 Name=Cave
-Shape=2
+Shape=Rough
 Placement=5
 TextureOverlay=Ridge
 OverlayType=1

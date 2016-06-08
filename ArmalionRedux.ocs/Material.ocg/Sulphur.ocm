@@ -1,6 +1,6 @@
 [Material]
 Name=Sulphur
-Shape=2
+Shape=Smooth
 Placement=5
 TextureOverlay=Rock
 OverlayType=1

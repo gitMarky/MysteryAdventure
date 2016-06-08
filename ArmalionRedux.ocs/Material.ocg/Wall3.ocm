@@ -1,6 +1,6 @@
 [Material]
 Name=Wall3
-Shape=0
+Shape=Smoother
 Placement=5
 TextureOverlay=SmallRock
 OverlayType=1

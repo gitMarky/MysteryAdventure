@@ -1,7 +1,6 @@
 [Material]
 Name=Snow
-Color=240,251,250,249,254,250,255,255,255
-Shape=2
+Shape=Smooth
 Density=50
 Friction=40
 DigFree=1
@@ -21,11 +20,3 @@ TextureOverlay=Flat
 PXSGfxSize=10
 PXSGfx=Snow
 PXSGfxRt=0,0,16,16,-8,-8
-Dig2Object=SNWB
-Dig2ObjectRatio=400
-Dig2ObjectRequest=1
-
-[Reaction]
-Type=Convert
-TargetSpec=Incindiary
-ConvertMat=Water
