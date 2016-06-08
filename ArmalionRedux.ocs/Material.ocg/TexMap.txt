@@ -5,7 +5,7 @@ OverloadMaterials
 # Import textures from global file as well
 OverloadTextures
 
-1=Tunnel-SmallRock
+1=Tunnel-tunnel_smallrock
 2=Tunnel-Smooth
 3=Wall-Flat
 4=Wall-RoughDark
@@ -16,7 +16,7 @@ OverloadTextures
 9=Wall-Brick2
 10=Wall2-Structure3
 11=Wall2-Brick
-12=Wall2-Brick2
+12=Wall2-wall2_brick2
 13=Wall3-Brick
 14=Wall3-Rough
 15=Cave-RoughDark
@@ -86,12 +86,12 @@ OverloadTextures
 79=Snow-Snow1
 80=Snow-Rough
 81=Brick-Flat
-82=Brick-SmallRock
+82=Brick-brick_smallrock
 83=Brick-DarkenB
 84=Brick-RoughDark
 85=Brick-TransB
 86=Brick-Bewuchs2
-87=Brick2-SmallRock
+87=Brick2-brick_smallrock
 88=Brick2-RoughDark
 89=Brick2-Flat
 90=Brick2-Bewuchs2
@@ -101,7 +101,7 @@ OverloadTextures
 94=Granite-Grass1
 95=Rock-Bewuchs3
 96=Rock-Rough
-97=Rock-rock-ridge
+97=Rock-rock_ridge
 98=Rock-Rock
 99=Rock-Brick
 100=Rock-Bewuchs2
