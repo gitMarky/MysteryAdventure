@@ -1,6 +1,6 @@
 [Material]
 Name=Gold
-Shape=FlatTop
+Shape=TopFlat
 Density=50
 Friction=100
 BlastFree=1
