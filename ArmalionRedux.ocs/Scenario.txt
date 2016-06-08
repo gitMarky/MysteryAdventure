@@ -15,6 +15,7 @@ InEarthLevel=0,0,0,100
 Sky=Clouds1;Default
 MapWidth=122,0,64,10000
 MapHeight=40,0,40,10000
+MapZoom=10
 Phase=0,0,0,100
 Period=0,0,0,100
 
