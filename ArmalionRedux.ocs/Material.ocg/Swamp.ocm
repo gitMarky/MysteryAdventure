@@ -1,7 +1,5 @@
 [Material]
-Name=WaterDark
-Color=37,80,70, 30,75,62, 45,87,76
-ColorAnimation=1
+Name=Swamp
 Density=25
 Instable=1
 MaxAirSpeed=25
@@ -11,4 +9,3 @@ Corrode=100
 Extinguisher=1
 Placement=10
 TextureOverlay=Liquid
-Alpha=80,120,160,40,60,80

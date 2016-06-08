@@ -1,6 +1,5 @@
 [Material]
-Name=Earth3
-Color=70,50,5,115,55,10,150,75,15
+Name=Earth2
 Shape=2
 Density=50
 Friction=80
