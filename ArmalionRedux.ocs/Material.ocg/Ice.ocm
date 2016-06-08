@@ -10,7 +10,7 @@ Placement=21
 TextureOverlay=Snow1
 OverlayType=1
 
-LightEmit=0,0,128
-LightSpot=208,96,96
+LightEmit=214,239,249
+LightSpot=243,253,250
 LightAngle=204
 

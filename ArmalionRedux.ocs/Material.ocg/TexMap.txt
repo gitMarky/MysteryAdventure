@@ -119,7 +119,7 @@ OverloadTextures
 112=Cave-Ridge
 113=Earth2-Smooth
 114=Earth3-Smooth
-115=Ice-Snow1
+115=Ice-ice_snow1
 116=Oil-Liquid
 117=Ore-Snow1
 118=Snow-Flat
