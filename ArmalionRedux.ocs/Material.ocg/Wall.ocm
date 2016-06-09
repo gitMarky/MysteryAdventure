@@ -2,5 +2,4 @@
 Name=Wall
 Shape=Smooth
 Placement=5
-TextureOverlay=SmallRock
 OverlayType=1
