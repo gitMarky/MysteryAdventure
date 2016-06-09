@@ -11,7 +11,7 @@ OverloadTextures
 4=Wall-wall_roughdark
 5=Wall-Structure3
 6=Wall-wall_brick
-7=Wall-SmallRock
+7=Wall-wall_smallrock
 8=Wall-Bewuchs2
 9=Wall-Brick2
 10=Wall2-wall2_structure3
@@ -59,7 +59,7 @@ OverloadTextures
 52=Earth-Dirt2
 53=Earth-Grass1
 54=EarthGrass-Grass1
-55=EarthGrass-Bewuchs4
+55=EarthGrass-earthgrass_bewuchs4
 56=EarthGrass-Bewuchs5
 57=EarthGrass-Swirl
 58=EarthGrass-Dirt1
@@ -72,7 +72,7 @@ OverloadTextures
 65=Sand-Sand2
 66=Gold-Rough
 67=Gold-Brick
-68=Gold-Brick2
+68=Gold-gold_brick2
 69=Ore-ore_rough
 70=Coal-Swirl
 71=Crystal-Flare
@@ -107,7 +107,7 @@ OverloadTextures
 100=Rock-Bewuchs2
 101=Rock-Dirt1
 102=Rock-Dirt2
-103=Rock-Grass1
+103=Rock-rock_grass1
 104=Black-Smooth
 105=FlyAshes-Spots
 106=FlySand-Smooth2
