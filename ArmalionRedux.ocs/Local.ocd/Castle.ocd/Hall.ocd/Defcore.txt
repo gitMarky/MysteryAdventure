@@ -7,7 +7,6 @@ Height=136
 Offset=-40,-68
 Value=100
 Mass=3000
-SolidMask=0,15,80,5,0,15
 Picture=0,0,80,136
 Vertices=4
 VertexX=-39,39,-39,39

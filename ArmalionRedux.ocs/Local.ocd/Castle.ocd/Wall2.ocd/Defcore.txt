@@ -7,7 +7,6 @@ Height=74
 Offset=-40,-37
 Value=40
 Mass=500
-SolidMask=0,14,80,5,0,14
 Picture=0,0,80,74
 Vertices=4
 VertexX=-39,39,-39,39
