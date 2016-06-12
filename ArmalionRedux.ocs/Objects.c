@@ -26,27 +26,37 @@ func CreateCastle()
 	PushBack(castle_parts, hall2);
 	PushBack(castle_parts, hall3);
 	
-	// 
+	// 2nd floor
 	
+	PushBack(castle_parts, CreateObject(CPW1,  21, 483, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW1, 141, 483, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW1, 261, 483, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW2, 201, 483, NO_OWNER));	// Alchemist lab
 	PushBack(castle_parts, CreateObject(CPW2, 81, 483, NO_OWNER));	// Workshop
 
-	//
+	// 1st floor
 	
+	PushBack(castle_parts, CreateObject(CPW1,  21, 543, NO_OWNER));
+	PushBack(castle_parts, CreateObject(CPW1,  61, 543, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW2, 121, 543, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW1, 261, 543, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW1, 381, 543, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW2, 201, 543, NO_OWNER));	// Kitchen
 	
+	PushBack(castle_parts, CreateObject(CPW1, 261, 603, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW2, 321, 603, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW1, 381, 603, NO_OWNER));
+
+	// Ground floor
 	
+	PushBack(castle_parts, CreateObject(CPW1, 261, 663, NO_OWNER));
+	PushBack(castle_parts, CreateObject(CPW2, 321, 663, NO_OWNER)); 	// Kontor
+	PushBack(castle_parts, CreateObject(CPW1, 381, 663, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW1, 421, 663, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW1, 538, 663, NO_OWNER));
-	PushBack(castle_parts, CreateObject(CPW2, 321, 663, NO_OWNER)); 	// Kontor
 
+	// Town gate tower
+	
 	PushBack(castle_parts, CreateObject(CPW1, 1585, 743, NO_OWNER));
 	
 	for (var castle_part in castle_parts) castle_part->SetClrModulation(colormod);
