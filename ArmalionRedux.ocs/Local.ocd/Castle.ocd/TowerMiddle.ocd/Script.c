@@ -4,4 +4,4 @@
 
 local Name = "$Name$";
 local Description = "$Description$";
-local Plane = 105;
+local Plane = 1000;
