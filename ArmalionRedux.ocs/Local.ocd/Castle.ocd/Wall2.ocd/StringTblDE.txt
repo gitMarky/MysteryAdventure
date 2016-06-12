@@ -1,0 +1,3 @@
+Name=Wand
+Description=Grundlage für einen Raum in einer Burg.
+

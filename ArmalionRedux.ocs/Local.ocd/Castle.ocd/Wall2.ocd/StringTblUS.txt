@@ -1,0 +1,3 @@
+Name=Wall
+Description=Basic element for a room in a castle.
+

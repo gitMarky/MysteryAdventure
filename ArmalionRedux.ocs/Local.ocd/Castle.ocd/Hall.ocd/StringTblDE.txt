@@ -1,0 +1,3 @@
+Name=Halle
+Description=Würdige Burgen brauchen auch eine große Halle.
+
