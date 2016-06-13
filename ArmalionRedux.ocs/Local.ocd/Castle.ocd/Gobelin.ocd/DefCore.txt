@@ -1,0 +1,9 @@
+[DefCore]
+id=Castle_Gobelin
+Version=7,0
+Category=C4D_StaticBack
+Width=20
+Height=30
+Offset=-10,-15
+Value=30
+Mass=10 

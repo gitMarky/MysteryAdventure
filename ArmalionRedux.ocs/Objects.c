@@ -4,6 +4,7 @@
 func InitializeObjects()
 {
 	CreateCastle();
+	CreateBarrels();
 	return true;
 }
 
@@ -101,6 +102,11 @@ func CreateCastle()
 	CreateObject(Castle_Torch, 347, 685, NO_OWNER)->SetRight()->SwitchOn();
 	CreateObject(Castle_Torch, 115, 812, NO_OWNER)->SetLeft()->SwitchOn();
 	CreateObject(Castle_Torch, 248, 955, NO_OWNER)->SetLeft()->SwitchOn();
+	
+	// Gobelins
+	
+	CreateObject(Castle_Gobelin, 121, 625, NO_OWNER);
+	CreateObject(Castle_Gobelin, 198, 625, NO_OWNER);
 }
 
 
@@ -109,5 +115,52 @@ func CreateCastleFloor(int x_start, int x_end, int y)
 	for (var x = x_start; x <= x_end; x += 40)
 	{
 		CreateObject(Castle_Floor, x, y, NO_OWNER);
+	}
+}
+
+
+func CreateBarrels()
+{
+	var barrels = [];
+	var large_barrels = [];
+	
+	PushBack(large_barrels, CreateObject(Dummy, 37, 835, NO_OWNER));
+	PushBack(large_barrels, CreateObject(Dummy, 58, 835, NO_OWNER));
+	PushBack(large_barrels, CreateObject(Dummy, 84, 835, NO_OWNER));
+	
+	var barrel1 = CreateObject(Dummy, 80, 844, NO_OWNER);
+	var barrel2 = CreateObject(Dummy, 86, 844, NO_OWNER);
+	barrel1->SetClrModulation(RGB(240, 240, 240));
+	barrel2->SetClrModulation(RGB(200, 200, 200));
+	PushBack(barrels, barrel1);
+	PushBack(barrels, barrel2);
+	PushBack(barrels, CreateObject(Dummy, 94, 844, NO_OWNER));
+
+	PushBack(barrels, CreateObject(Dummy, 1898, 766, NO_OWNER));
+	PushBack(barrels, CreateObject(Dummy, 1901, 773, NO_OWNER));
+	PushBack(barrels, CreateObject(Dummy, 1895, 773, NO_OWNER));
+	
+	var barrel3 = CreateObject(Dummy, 2782, 505, NO_OWNER);
+	barrel3->SetR(-16);
+	PushBack(barrels, barrel3);
+	PushBack(barrels, CreateObject(Dummy, 2790, 505, NO_OWNER));
+	
+	// set barrels to 8x10
+	for (var barrel in barrels)
+	{
+		barrel->SetObjDrawTransform(800, 0, 0, 0, 750);
+		barrel->SetShape(-4, -5, 8, 10);
+		barrel->SetGraphics(nil, Barrel);
+		barrel.Visibility = VIS_All;
+	}
+	
+	for (var barrel in large_barrels)
+	{
+		barrel->SetObjDrawTransform(2000, 0, 0, 0, 2000);
+		barrel->SetShape(-9, -9, 18, 18);
+		barrel->SetGraphics(nil, Barrel);
+		barrel.Visibility = VIS_All;
+		barrel.MeshTransformation = Trans_Mul(Trans_Rotate(90, 1, 0, 0), Trans_Rotate(-10, 0, 0, 1));
+		barrel->SetClrModulation(RGB(150, 150, 150));
 	}
 }
