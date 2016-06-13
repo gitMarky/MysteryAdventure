@@ -5,6 +5,7 @@ func InitializeObjects()
 {
 	CreateCastle();
 	CreateBarrels();
+	CreateFlour();
 	return true;
 }
 
@@ -163,4 +164,15 @@ func CreateBarrels()
 		barrel.MeshTransformation = Trans_Mul(Trans_Rotate(90, 1, 0, 0), Trans_Rotate(-10, 0, 0, 1));
 		barrel->SetClrModulation(RGB(150, 150, 150));
 	}
+}
+
+
+func CreateFlour()
+{
+	CreateObject(Flour, 2752, 503, NO_OWNER);
+	CreateObject(Flour,   51, 841, NO_OWNER)->SetClrModulation(RGB(240, 240, 240));
+	CreateObject(Flour,   41, 841, NO_OWNER);
+	CreateObject(Flour,   56, 841, NO_OWNER);
+	CreateObject(Flour,   62, 841, NO_OWNER)->SetClrModulation(RGB(240, 240, 240));
+	CreateObject(Flour,   66, 841, NO_OWNER);
 }

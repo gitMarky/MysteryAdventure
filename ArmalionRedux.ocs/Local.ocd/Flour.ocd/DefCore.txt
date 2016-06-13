@@ -1,0 +1,13 @@
+[DefCore]
+id=Flour
+Version=6,0
+Category=C4D_Object
+Width=10
+Height=11
+Offset=-5,-5
+Vertices=3
+VertexX=0,3,-3
+VertexY=0,5,5
+VertexFriction=50,100,100
+Value=5
+Mass=2
