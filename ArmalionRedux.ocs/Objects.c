@@ -6,6 +6,7 @@ func InitializeObjects()
 	CreateCastle();
 	CreateBarrels();
 	CreateFlour();
+	CreateRails();
 	return true;
 }
 
@@ -175,4 +176,19 @@ func CreateFlour()
 	CreateObject(Flour,   56, 841, NO_OWNER);
 	CreateObject(Flour,   62, 841, NO_OWNER)->SetClrModulation(RGB(240, 240, 240));
 	CreateObject(Flour,   66, 841, NO_OWNER);
+}
+
+
+func CreateRails()
+{
+	CreateObject(Castle_Rail, 649, 730, NO_OWNER)->SetR(30); //FixR=F1966080 / 65536
+	CreateObject(Castle_Rail, 759, 795, NO_OWNER)->SetR(30); //FixR=F1966080
+	CreateObject(Castle_Rail, 711, 761, NO_OWNER)->SetR(33); // FixR=F2162688
+	CreateObject(Castle_Rail, 734, 778, NO_OWNER)->SetR(40); // FixR=F2621440
+	CreateObject(Castle_Rail, 1809, 775, NO_OWNER);
+	CreateObject(Castle_Rail, 1820, 775, NO_OWNER);
+	CreateObject(Castle_Rail, 1796, 775, NO_OWNER);
+	CreateObject(Castle_Rail, 1785, 775, NO_OWNER);
+	CreateObject(Castle_Rail, 1761, 775, NO_OWNER);
+	CreateObject(Castle_Rail, 1747, 775, NO_OWNER);
 }

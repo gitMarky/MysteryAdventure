@@ -1,0 +1,14 @@
+[DefCore]
+id=Castle_Rail
+Version=7,0
+Category=C4D_StaticBack
+Width=30
+Height=10
+Offset=-15,-5
+Vertices=4
+VertexX=-14,14,-14,14
+VertexY=-5,-5,4,4
+VertexFriction=50,50,50,50
+Value=10
+Mass=10
+Rotate=1
