@@ -29,12 +29,14 @@ public func IsLightSource()
 
 public func SetLeft()
 {
+	torch_offset = -1;
 	this.MeshTransformation = Trans_Mul(CASTLE_TORCH_ROT_SCREEN, CASTLE_TORCH_ROT_LEFT);
 	return this;
 }
 
 public func SetRight()
 {
+	torch_offset = +1;
 	this.MeshTransformation = Trans_Mul(CASTLE_TORCH_ROT_SCREEN, CASTLE_TORCH_ROT_RIGHT);
 	return this;
 }
@@ -55,12 +57,19 @@ public func ControlUse(object clonk)
 
 public func IsInteractable(object clonk)
 {
-	return interactable;
+	return torch_interactable;
 }
 
 func GetInteractionMetaInfo(object clonk)
 {
-	return { Description = "$MsgTorchDetach$", IconName = nil, IconID = nil, Selected = false };
+	if (IsLightSource())
+	{
+		return { Description = "$MsgTorchSwitchOff$", IconName = nil, IconID = nil, Selected = false };
+	}
+	else
+	{
+		return { Description = "$MsgTorchSwitchOn$", IconName = nil, IconID = nil, Selected = false };
+	}
 }
 
 
@@ -123,10 +132,12 @@ private func FxIntBurningTimer (object target, effect fx, int time)
 {
 	// If the torched is attached or fixed it should emit some fire and smoke particles.
 
+	var x = torch_offset;
+	
 	// Fire effects.
-	CreateParticle("FireSharp", PV_Random(-1, 2), PV_Random(0, -3), PV_Random(-2, 2), PV_Random(-3, -5), 10 + Random(3), fx.flame, 8);
+	CreateParticle("FireSharp", PV_Random(x - 1, x + 2), PV_Random(0, -3), PV_Random(-2, 2), PV_Random(-3, -5), 10 + Random(3), fx.flame, 8);
 	// Smoke effects.
-	CreateParticle("Smoke", PV_Random(-1, 2), PV_Random(-7, -9), PV_Random(-2, 2), PV_Random(-2, 2), 24 + Random(12), fx.smoke, 2);
+	CreateParticle("Smoke", PV_Random(x - 1, x + 2), PV_Random(-7, -9), PV_Random(-2, 2), PV_Random(-2, 2), 24 + Random(12), fx.smoke, 2);
 
 	return 1;
 }
@@ -143,6 +154,18 @@ protected func FxIntBurningStop(object target, proplist effect, int reason, bool
 public func SaveScenarioObject(proplist props, ...)
 {
 	if (!_inherited(props, ...)) return false;
+	if (IsLightSource())
+	{
+		props->AddCall("Switch on", this, "SwitchOn");
+	}
+	if (torch_offset = -1)
+	{
+		props->AddCall("Left", this, "SetLeft");
+	}
+	if (torch_offset = +1)
+	{
+		props->AddCall("Right", this, "SetRight");
+	}
 	return true;
 }
 
@@ -156,7 +179,8 @@ protected func Definition(def)
 
 local Name = "$Name$";
 local Description = "$Description$";
-local interactable = false;
+local torch_interactable = false;
+local torch_offset = 0;
 
 local CASTLE_TORCH_ROT_SCREEN;
 local CASTLE_TORCH_ROT_LEFT;
