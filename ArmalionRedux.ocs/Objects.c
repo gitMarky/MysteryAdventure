@@ -19,9 +19,9 @@ func CreateCastle()
 	var hall1 = CreateObject(CPH1,  41, 633, NO_OWNER);
 	var hall2 = CreateObject(CPH1, 121, 633, NO_OWNER);
 	var hall3 = CreateObject(CPH1, 201, 633, NO_OWNER);
-	hall1.Plane = -1;
-	hall2.Plane = -1;
-	hall3.Plane = -1;
+	hall1.Plane -= 200;
+	hall2.Plane -= 200;
+	hall3.Plane -= 200;
 	
 	PushBack(castle_parts, hall1);
 	PushBack(castle_parts, hall2);
@@ -59,6 +59,7 @@ func CreateCastle()
 	PushBack(castle_parts, CreateObject(CPW1, 381, 603, NO_OWNER));
 
 	CreateCastleFloor(21, 381, 603);
+	PushBack(castle_parts, CreateObject(Castle_Wall_Left, 261, 603, NO_OWNER));
 	PushBack(castle_parts, CreateObject(Castle_Tower_Middle, 381, 603, NO_OWNER));
 
 
@@ -90,6 +91,16 @@ func CreateCastle()
 	
 	// Plane
 	for (var obj in FindObjects(Find_InRect(20, 480, 4, 185))) obj.Plane -= 200;
+	
+	
+	// Torches
+	
+	CreateObject(Castle_Torch, 126, 554, NO_OWNER)->SetLeft()->SwitchOn();
+	CreateObject(Castle_Torch, 313, 615, NO_OWNER)->SetLeft()->SwitchOn();
+	CreateObject(Castle_Torch, 295, 685, NO_OWNER)->SetLeft()->SwitchOn();
+	CreateObject(Castle_Torch, 347, 685, NO_OWNER)->SetRight()->SwitchOn();
+	CreateObject(Castle_Torch, 115, 812, NO_OWNER)->SetLeft()->SwitchOn();
+	CreateObject(Castle_Torch, 248, 955, NO_OWNER)->SetLeft()->SwitchOn();
 }
 
 

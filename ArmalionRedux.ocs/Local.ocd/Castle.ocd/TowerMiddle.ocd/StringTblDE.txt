@@ -1,1 +1,7 @@
-Name=Wand
+Name=Turm
+TxtLeftgate=Linkes Tor bedienen
+TxtRightgate=Rechtes Tor bedienen
+TxtLeftgate=Linkes Tor
+TxtRightgate=Rechtes Tor
+TxtDrawbridgeup=Zugbrücke rauf
+TxtDrawbridgedown=Zugbrücke runter

@@ -1,1 +1,7 @@
-Name=Wall
+Name=Tower
+TxtLeftgate=Left gate
+TxtRightgate=Right gate
+TxtLeftgate=Left gate
+TxtRightgate=Right gate
+TxtDrawbridgeup=Drawbridge up
+TxtDrawbridgedown=Drawbridge down
