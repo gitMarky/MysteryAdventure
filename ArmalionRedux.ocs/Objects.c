@@ -98,6 +98,20 @@ func CreateCastle()
 	CreateCastleFloor(1585, 1585, 743);
 	PushBack(castle_parts, CreateObject(Castle_Tower_Middle, 1585, 743, NO_OWNER));
 
+	// Tower battlements
+	var tower_battlements = [];
+	PushBack(tower_battlements, CreateObject(Castle_Tower_Wall, 283, 454, NO_OWNER));
+	PushBack(castle_parts, CreateObject(Castle_Tower_Wall, 360, 513, NO_OWNER));
+	PushBack(tower_battlements, CreateObject(Castle_Tower_Wall, 403, 513, NO_OWNER));
+	PushBack(tower_battlements, CreateObject(Castle_Tower_Wall, 443, 635, NO_OWNER));
+	PushBack(castle_parts, CreateObject(Castle_Tower_Wall, 517, 635, NO_OWNER));
+	PushBack(tower_battlements, CreateObject(Castle_Tower_Wall, 560, 635, NO_OWNER));
+	PushBack(castle_parts, CreateObject(Castle_Tower_Wall, 1564, 715, NO_OWNER));
+	PushBack(tower_battlements, CreateObject(Castle_Tower_Wall, 1607, 715, NO_OWNER));
+
+	for (var battlement in tower_battlements) battlement->SetObjDrawTransform(-1000, 0, -1000, 0, 1000);
+	castle_parts = Concatenate(castle_parts, tower_battlements);
+	
 	// Color objects
 	for (var castle_part in castle_parts) castle_part->SetClrModulation(colormod);
 	
@@ -117,7 +131,7 @@ func CreateCastle()
 	// Gobelins
 	
 	CreateObject(Castle_Gobelin, 121, 625, NO_OWNER);
-	CreateObject(Castle_Gobelin, 198, 625, NO_OWNER);
+	CreateObject(Castle_Gobelin, 198, 625, NO_OWNER);	
 }
 
 

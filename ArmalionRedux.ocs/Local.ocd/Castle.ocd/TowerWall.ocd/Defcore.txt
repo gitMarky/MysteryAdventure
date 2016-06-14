@@ -1,0 +1,13 @@
+[DefCore]
+id=Castle_Tower_Wall
+Version=6,0
+Category=C4D_StaticBack
+Width=3
+Height=15
+Offset=-2,-7
+Value=1
+Mass=10
+SolidMask=0,0,3,14
+Vertices=1
+VertexFriction=100
+

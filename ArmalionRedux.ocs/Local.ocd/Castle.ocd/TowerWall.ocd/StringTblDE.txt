@@ -1,0 +1,3 @@
+Name=Brustwehr
+Description=Damit die Feinde nicht einfach heraufklettern können.
+
