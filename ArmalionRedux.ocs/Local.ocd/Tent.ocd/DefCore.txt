@@ -1,0 +1,14 @@
+[DefCore]
+id=Tent
+Version=7,0
+Category=C4D_StaticBack
+Width=42
+Height=48
+Offset=-21,-24
+Vertices=5
+VertexX=-1,-19,19,-18,18
+VertexY=-23,-5,-5,22,22
+VertexFriction=50,50,50,50,50
+Value=15
+Mass=400
+ColorByOwner=1

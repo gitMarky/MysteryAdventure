@@ -7,6 +7,7 @@ func InitializeObjects()
 	CreateBarrels();
 	CreateFlour();
 	CreateRails();
+	CreateCamp();
 	return true;
 }
 
@@ -172,20 +173,8 @@ func CreateBarrels()
 	PushBack(barrels, CreateObject(Dummy, 1898, 766, NO_OWNER));
 	PushBack(barrels, CreateObject(Dummy, 1901, 773, NO_OWNER));
 	PushBack(barrels, CreateObject(Dummy, 1895, 773, NO_OWNER));
-	
-	var barrel3 = CreateObject(Dummy, 2782, 505, NO_OWNER);
-	barrel3->SetR(-16);
-	PushBack(barrels, barrel3);
-	PushBack(barrels, CreateObject(Dummy, 2790, 505, NO_OWNER));
-	
-	// set barrels to 8x10
-	for (var barrel in barrels)
-	{
-		barrel->SetObjDrawTransform(800, 0, 0, 0, 750);
-		barrel->SetShape(-4, -5, 8, 10);
-		barrel->SetGraphics(nil, Barrel);
-		barrel.Visibility = VIS_All;
-	}
+		
+	MakeBarrels(barrels);
 	
 	for (var barrel in large_barrels)
 	{
@@ -201,7 +190,6 @@ func CreateBarrels()
 
 func CreateFlour()
 {
-	CreateObject(Flour, 2752, 503, NO_OWNER);
 	CreateObject(Flour,   51, 841, NO_OWNER)->SetClrModulation(RGB(240, 240, 240));
 	CreateObject(Flour,   41, 841, NO_OWNER);
 	CreateObject(Flour,   56, 841, NO_OWNER);
@@ -222,4 +210,34 @@ func CreateRails()
 	CreateObject(Castle_Rail, 1785, 775, NO_OWNER);
 	CreateObject(Castle_Rail, 1761, 775, NO_OWNER);
 	CreateObject(Castle_Rail, 1747, 775, NO_OWNER);
+}
+
+
+func CreateCamp()
+{
+	CreateObject(Flour, 2752, 503, NO_OWNER);
+	var tent = CreateObject(Tent, 2768, 485, NO_OWNER);
+	tent->SetClrModulation(RGB(175, 100, 55));
+	tent->SetColor(RGB(255,164,100));
+
+	var barrels = [];
+	var barrel = CreateObject(Dummy, 2782, 505, NO_OWNER);
+	barrel->SetR(-16);
+	PushBack(barrels, barrel);
+	PushBack(barrels, CreateObject(Dummy, 2790, 505, NO_OWNER));
+	
+	MakeBarrels(barrels);
+}
+
+
+func MakeBarrels(barrels)
+{
+	// set barrels to 8x10
+	for (var barrel in barrels)
+	{
+		barrel->SetObjDrawTransform(800, 0, 0, 0, 750);
+		barrel->SetShape(-4, -5, 8, 10);
+		barrel->SetGraphics(nil, Barrel);
+		barrel.Visibility = VIS_All;
+	}
 }
