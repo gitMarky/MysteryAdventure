@@ -38,6 +38,9 @@ func CreateCastle()
 	PushBack(castle_parts, CreateObject(CPW2, 201, 483, NO_OWNER));	// Alchemist lab
 	PushBack(castle_parts, CreateObject(CPW2,  81, 483, NO_OWNER));	// Workshop
 
+	var battlements = CreateObjectRow(Castle_Battlement, 21, 261, 483);
+	castle_parts = Concatenate(castle_parts, battlements);
+	
 	CreateCastleFloor(21, 261, 483);
 	PushBack(castle_parts, CreateObject(Castle_Tower_Right, 261, 483, NO_OWNER));
 
@@ -50,17 +53,20 @@ func CreateCastle()
 	PushBack(castle_parts, CreateObject(CPW1, 381, 543, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW2, 201, 543, NO_OWNER));	// Kitchen
 	
+	PushBack(castle_parts, CreateObject(Castle_Battlement, 381, 543, NO_OWNER));
 	CreateCastleFloor( 21, 261, 543);
 	CreateCastleFloor(381, 381, 543);
 	PushBack(castle_parts, CreateObject(Castle_Tower_Middle, 261, 543, NO_OWNER));
 	PushBack(castle_parts, CreateObject(Castle_Tower_Right, 381, 543, NO_OWNER));
 
 	// 1st floor
-	
+
 	PushBack(castle_parts, CreateObject(CPW1, 261, 603, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW2, 321, 603, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW1, 381, 603, NO_OWNER));
 
+	PushBack(castle_parts, CreateObject(Castle_Battlement, 301, 603, NO_OWNER));
+	PushBack(castle_parts, CreateObject(Castle_Battlement, 341, 603, NO_OWNER));
 	CreateCastleFloor(21, 381, 603);
 	PushBack(castle_parts, CreateObject(Castle_Wall_Left, 261, 603, NO_OWNER));
 	PushBack(castle_parts, CreateObject(Castle_Tower_Middle, 381, 603, NO_OWNER));
@@ -75,9 +81,11 @@ func CreateCastle()
 
 	CreateCastleFloor(261, 421, 663);
 
+	PushBack(castle_parts, CreateObject(Castle_Battlement, 421, 663, NO_OWNER));
 	PushBack(castle_parts, CreateObject(Castle_Tower_Middle, 421, 663, NO_OWNER));
 
 	
+	PushBack(castle_parts, CreateObject(Castle_Battlement, 538, 663, NO_OWNER)); // Tower in the front 
 	PushBack(castle_parts, CreateObject(CPW1, 538, 663, NO_OWNER)); // Tower in the front 
 	CreateCastleFloor(538, 538, 663);
 	PushBack(castle_parts, CreateObject(Castle_Tower_Middle, 538, 663, NO_OWNER));
@@ -85,6 +93,7 @@ func CreateCastle()
 
 	// Town gate tower
 	
+	PushBack(castle_parts, CreateObject(Castle_Battlement, 1585, 743, NO_OWNER));
 	PushBack(castle_parts, CreateObject(CPW1, 1585, 743, NO_OWNER));
 	CreateCastleFloor(1585, 1585, 743);
 	PushBack(castle_parts, CreateObject(Castle_Tower_Middle, 1585, 743, NO_OWNER));
@@ -114,10 +123,18 @@ func CreateCastle()
 
 func CreateCastleFloor(int x_start, int x_end, int y)
 {
+	CreateObjectRow(Castle_Floor, x_start, x_end, y);
+}
+
+
+func CreateObjectRow(id def, int x_start, int x_end, int y)
+{
+	var objects = [];
 	for (var x = x_start; x <= x_end; x += 40)
 	{
-		CreateObject(Castle_Floor, x, y, NO_OWNER);
+		PushBack(objects, CreateObject(def, x, y, NO_OWNER));
 	}
+	return objects;
 }
 
 
