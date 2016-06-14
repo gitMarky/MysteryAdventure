@@ -1,0 +1,7 @@
+[DefCore]
+id=CampFire
+Version=7,0
+Category=C4D_StaticBack
+Width=20
+Height=25
+Offset=-10,-15

@@ -227,6 +227,8 @@ func CreateCamp()
 	PushBack(barrels, CreateObject(Dummy, 2790, 505, NO_OWNER));
 	
 	MakeBarrels(barrels);
+	
+	CreateObject(CampFire, 2730, 500, NO_OWNER);
 }
 
 
