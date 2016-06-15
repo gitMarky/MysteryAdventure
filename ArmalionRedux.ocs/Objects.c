@@ -270,6 +270,7 @@ func MakeBarrels(barrels)
 		barrel->SetShape(-4, -5, 8, 10);
 		barrel->SetGraphics(nil, Barrel);
 		barrel.Visibility = VIS_All;
+		barrel->SetMeshMaterial("Classic_Barrel");
 	}
 }
 
