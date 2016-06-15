@@ -8,6 +8,7 @@ func InitializeObjects()
 	CreateFlour();
 	CreateRails();
 	CreateCamp();
+	CreateFarm();
 	return true;
 }
 
@@ -170,10 +171,6 @@ func CreateBarrels()
 	PushBack(barrels, barrel2);
 	PushBack(barrels, CreateObject(Dummy, 94, 844, NO_OWNER));
 
-	PushBack(barrels, CreateObject(Dummy, 1898, 766, NO_OWNER));
-	PushBack(barrels, CreateObject(Dummy, 1901, 773, NO_OWNER));
-	PushBack(barrels, CreateObject(Dummy, 1895, 773, NO_OWNER));
-		
 	MakeBarrels(barrels);
 	
 	for (var barrel in large_barrels)
@@ -200,16 +197,10 @@ func CreateFlour()
 
 func CreateRails()
 {
-	CreateObject(Castle_Rail, 649, 730, NO_OWNER)->SetR(30); //FixR=F1966080 / 65536
-	CreateObject(Castle_Rail, 759, 795, NO_OWNER)->SetR(30); //FixR=F1966080
-	CreateObject(Castle_Rail, 711, 761, NO_OWNER)->SetR(33); // FixR=F2162688
-	CreateObject(Castle_Rail, 734, 778, NO_OWNER)->SetR(40); // FixR=F2621440
-	CreateObject(Castle_Rail, 1809, 775, NO_OWNER);
-	CreateObject(Castle_Rail, 1820, 775, NO_OWNER);
-	CreateObject(Castle_Rail, 1796, 775, NO_OWNER);
-	CreateObject(Castle_Rail, 1785, 775, NO_OWNER);
-	CreateObject(Castle_Rail, 1761, 775, NO_OWNER);
-	CreateObject(Castle_Rail, 1747, 775, NO_OWNER);
+	CreateObject(Castle_Rail, 649, 730, NO_OWNER)->SetR(30);
+	CreateObject(Castle_Rail, 759, 795, NO_OWNER)->SetR(30);
+	CreateObject(Castle_Rail, 711, 761, NO_OWNER)->SetR(33);
+	CreateObject(Castle_Rail, 734, 778, NO_OWNER)->SetR(40);
 }
 
 
@@ -234,6 +225,42 @@ func CreateCamp()
 }
 
 
+func CreateFarm()
+{
+	// wheat
+
+	var crops = [];
+	PushBack(crops, CreateObject(Dummy, 1746, 773, NO_OWNER));
+	PushBack(crops, CreateObject(Dummy, 1754, 771, NO_OWNER));
+	PushBack(crops, CreateObject(Dummy, 1828, 774, NO_OWNER));
+	PushBack(crops, CreateObject(Dummy, 1819, 775, NO_OWNER));
+	PushBack(crops, CreateObject(Dummy, 1803, 772, NO_OWNER));
+	PushBack(crops, CreateObject(Dummy, 1787, 772, NO_OWNER));
+	PushBack(crops, CreateObject(Dummy, 1768, 774, NO_OWNER));
+
+	for (var crop in crops) crop.Plane = -1;
+	MakeDummy(Wheat, crops);
+	
+	// border
+	CreateObject(Castle_Rail, 1809, 775, NO_OWNER);
+	CreateObject(Castle_Rail, 1820, 775, NO_OWNER);
+	CreateObject(Castle_Rail, 1796, 775, NO_OWNER);
+	CreateObject(Castle_Rail, 1785, 775, NO_OWNER);
+	CreateObject(Castle_Rail, 1761, 775, NO_OWNER);
+	CreateObject(Castle_Rail, 1747, 775, NO_OWNER);
+
+	// hut
+	
+	// barrels
+	var barrels = [];
+	PushBack(barrels, CreateObject(Dummy, 1898, 766, NO_OWNER));
+	PushBack(barrels, CreateObject(Dummy, 1901, 773, NO_OWNER));
+	PushBack(barrels, CreateObject(Dummy, 1895, 773, NO_OWNER));
+		
+	MakeBarrels(barrels);
+}
+
+
 func MakeBarrels(barrels)
 {
 	// set barrels to 8x10
@@ -243,5 +270,15 @@ func MakeBarrels(barrels)
 		barrel->SetShape(-4, -5, 8, 10);
 		barrel->SetGraphics(nil, Barrel);
 		barrel.Visibility = VIS_All;
+	}
+}
+
+
+func MakeDummy(id def, objects)
+{
+	for (var obj in objects)
+	{
+		obj.Visibility = VIS_All;
+		obj->SetGraphics(nil, def);
 	}
 }
