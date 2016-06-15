@@ -215,6 +215,8 @@ func CreateRails()
 
 func CreateCamp()
 {
+	CreateObject(Bag, 2700, 509, NO_OWNER);
+
 	CreateObject(Flour, 2752, 503, NO_OWNER);
 	var tent = CreateObject(Tent, 2768, 485, NO_OWNER);
 	tent->SetClrModulation(RGB(175, 100, 55));
